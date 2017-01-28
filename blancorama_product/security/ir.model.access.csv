@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_blancorama_product_blancorama_product,blancorama_product.blancorama_product,model_blancorama_product_blancorama_product,,1,0,0,0
