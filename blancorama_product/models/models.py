@@ -2,7 +2,7 @@
 
 from openerp import models, fields, api
 
-class product(models.Model):
+class product_product(models.Model):
 	_inherit = 'product.product'
 	
 	measurements = fields.Char()
