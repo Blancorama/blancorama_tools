@@ -6,6 +6,7 @@ class product_product(models.Model):
 	_inherit = 'product.product'
 	
 	measurements = fields.Char()
+	brand = fields.Char()
 #     name = fields.Char()
 #     value = fields.Integer()
 #     value2 = fields.Float(compute="_value_pc", store=True)
