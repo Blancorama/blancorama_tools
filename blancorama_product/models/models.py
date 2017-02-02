@@ -7,6 +7,7 @@ class product_product(models.Model):
 	
 	measurements = fields.Char()
 	brand = fields.Char()
+	composition = fields.Char()
 #     name = fields.Char()
 #     value = fields.Integer()
 #     value2 = fields.Float(compute="_value_pc", store=True)
