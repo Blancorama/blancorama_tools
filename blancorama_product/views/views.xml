@@ -1,59 +1,55 @@
 <openerp>
   <data>
-    <!-- explicit list view definition -->
-    <!--
-    <record model="ir.ui.view" id="blancorama_product.list">
-      <field name="name">blancorama_product list</field>
-      <field name="model">blancorama_product.blancorama_product</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
-      </field>
-    </record>
-    -->
+    <!--Email template -->
+    <!-- <record id="email_template_edi_sale_modified" model="mail.template">
+        <field name="name">Sales Order - Send by Email</field>
+        <field name="email_from">${(object.user_id.email and '%s &lt;%s&gt;' % (object.user_id.name, object.user_id.email) or '')|safe}</field>
+        <field name="subject">${object.company_id.name} ${object.state in ('draft', 'sent') and 'Presupuesto' or 'Pedido'} (Ref ${object.name or 'n/a' })</field>
+        <field name="partner_to">${object.partner_invoice_id.id}</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="auto_delete" eval="True"/>
+        <field name="report_template" ref="sale.report_sale_order"/>
+        <field name="report_name">${(object.name or '').replace('/','_')}_${object.state == 'draft' and 'draft' or ''}</field>
+        <field name="lang">${object.partner_id.lang}</field>
+        <field name="body_html"><![CDATA[
+            <div style="font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; ">
 
-    <!-- actions opening views on models -->
-    <!--
-    <record model="ir.actions.act_window" id="blancorama_product.action_window">
-      <field name="name">blancorama_product window</field>
-      <field name="res_model">blancorama_product.blancorama_product</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-    -->
+            <p>Hola ${object.partner_id.name},</p>
 
-    <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="blancorama_product.action_server">
-      <field name="name">blancorama_product server</field>
-      <field name="model_id" ref="model_blancorama_product_blancorama_product"/>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-      </field>
-    </record>
-    -->
+            <p>¡Gracias por tu compra! Tus productos estarán en camino muy pronto. Te enviaremos un correo con la información de envío y número de guía dentro de las siguientes 24 hrs. Todos los detalles de tu pedido están en el documento adjunto. </p>
 
-    <!-- Top menu item -->
-    <!--
-    <menuitem name="blancorama_product" id="blancorama_product.menu_root"/>
-    -->
-    <!-- menu categories -->
-    <!--
-    <menuitem name="Menu 1" id="blancorama_product.menu_1" parent="blancorama_product.menu_root"/>
-    <menuitem name="Menu 2" id="blancorama_product.menu_2" parent="blancorama_product.menu_root"/>
-    -->
-    <!-- actions -->
-    <!--
-    <menuitem name="List" id="blancorama_product.menu_1_list" parent="blancorama_product.menu_1"
-              action="blancorama_product.action_window"/>
-    <menuitem name="Server to list" id="blancorama_product" parent="blancorama_product.menu_2"
-              action="blancorama_product.action_server"/>
-    -->
+            <p>¿Preguntas? Llámanos al 844 154 5227</p>
+
+            <p>¡Gracias por elegir a Blancorama!</p>
+
+            </div>
+        ]]>
+        </field>
+    </record>
+    <record id="email_template_edi_sale" model="mail.template">
+        <field name="name">Sales Order - Send by Email</field>
+        <field name="email_from">${(object.user_id.email and '%s &lt;%s&gt;' % (object.user_id.name, object.user_id.email) or '')|safe}</field>
+        <field name="subject">${object.company_id.name} ${object.state in ('draft', 'sent') and 'Presupuesto' or 'Pedido'} (Ref ${object.name or 'n/a' })</field>
+        <field name="partner_to">${object.partner_invoice_id.id}</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="auto_delete" eval="True"/>
+        <field name="report_template" ref="sale.report_sale_order"/>
+        <field name="report_name">${(object.name or '').replace('/','_')}_${object.state == 'draft' and 'draft' or ''}</field>
+        <field name="lang">${object.partner_id.lang}</field>
+        <field name="body_html"><![CDATA[
+            <div style="font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; ">
+
+            <p>Hola ${object.partner_id.name},</p>
+
+            <p>¡Gracias por tu compra! Tus productos estarán en camino muy pronto. Te enviaremos un correo con la información de envío y número de guía dentro de las siguientes 24 hrs. Todos los detalles de tu pedido están en el documento adjunto. </p>
+
+            <p>¿Preguntas? Llámanos al 844 154 5227</p>
+
+            <p>¡Gracias por elegir a Blancorama!</p>
+
+            </div>
+        ]]>
+        </field>
+    </record> -->
   </data>
 </openerp>
