@@ -17,6 +17,19 @@ class product_product(models.Model):
 #     def _value_pc(self):
 #         self.value2 = float(self.value) / 100
 
+class sale_order(models.Model):
+    _inherit = 'sale.order'
+
+    billing_required = fields.Boolean(default=True)
+
+    def compute_total(self,amount_total):
+        return amount_total + amount_total * 0.07
+    
+    def compute_subtotal(self,quantity,price_unit):
+        return quantity * price_unit + quantity * price_unit * 0.07
+           
+    def compute_product_price_unit(self,price_unit):
+        return price_unit + price_unit * 0.07
 
 # class product_product(models.Model):
 # 	_inherit = 'sale.order'
